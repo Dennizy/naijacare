@@ -29,7 +29,7 @@ async function osm(lat,lon,r){const q=`[out:json][timeout:25];(nwr["amenity"~"^(
 async function supa(lat,lon,r){if(!sb)return[];const dg=Math.max(0.3,r/100000);
  const {data,error}=await sb.from('hospitals').select('*').gte('lat',lat-dg).lte('lat',lat+dg).gte('lon',lon-dg).lte('lon',lon+dg).limit(500);
  if(error)return[];return data.map(x=>({...x,id:'db-'+x.id,has_children:/child|paed/i.test(x.services||''),has_pharmacy:x.type==='Pharmacy'||/pharm/i.test(x.services||''),src:'db'}))}
- const st=STATES.find(s=>s[0]===stateName);const c=st?{lat:st[1],lon:st[2]}:pos;let out=[];
+ const st=STATES.find(s=>s[0]===stateName  (stateName==="FCT" && s[0]==="Abuja")  (stateName==="Abuja" && s[0]==="FCT"));
  for(const r of st?[30000]:[8000,25000,60000]){
   const [a,b]=await Promise.allSettled([supa(c.lat,c.lon,r),osm(c.lat,c.lon,r)]);
   out=[...(a.value||[])];for(const o of (b.value||[]))if(!out.some(x=>hav(x.lat,x.lon,o.lat,o.lon)<80))out.push(o);
