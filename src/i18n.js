@@ -1,0 +1,52 @@
+// Order: [English, Pidgin, Hausa, Yoruba, Igbo]. Missing entries fall back to English.
+export const LANGS=[['en','English'],['pcm','Pidgin'],['ha','Hausa'],['yo','Yorùbá'],['ig','Igbo']];
+const IDX={en:0,pcm:1,ha:2,yo:3,ig:4};
+export const STT={en:'en-NG',pcm:'en-NG',ha:'ha-NG',yo:'yo-NG',ig:'ig-NG'};
+const K={
+tag:['Press to Speak in Your Language','Press to talk for your language','Danna don yin magana da harshenka','Tẹ láti sọ̀rọ̀ ní èdè rẹ','Pịa ka ị kwuo n’asụsụ gị'],
+search:['Find hospital near you...','Find hospital near you...','Nemi asibiti kusa da kai...','Wá ilé-ìwòsàn nítòsí rẹ...','Chọọ ụlọ ọgwụ nso gị...'],
+sosBtn:['Find Nearest Hospital NOW','Find Nearest Hospital NOW','Nemo Asibiti Mafi Kusa YANZU','Wá Ilé-ìwòsàn To Súnmọ́ Jù BÂYÌÍ','Chọta Ụlọ ọgwụ Kacha Nso NGWA NGWA'],
+more:['Show More','Show More','Kara nuna','Fi díẹ̀ sí i','Gosi karịa'],
+call:['Call','Call','Kira','Pe','Kpọọ'],
+dir:['Directions','Directions','Kwatance','Ìtọ́sọ́nà','Ntụziaka'],
+startNav:['Start Voice Navigation','Start Voice Direction','Fara Jagorar Murya','Bẹ̀rẹ̀ Ìtọ́sọ́nà Ohùn','Malite Ntụziaka Olu'],
+stopNav:['Stop','Stop','Tsaya','Duro','Kwụsị'],
+open:['Open','Open','A buɗe','Ṣí','Meghere'],
+closed:['Closed','Closed','A rufe','Ti ti','Mechiri'],
+nohrs:['Hours unknown','Hours no clear','Ba a san lokaci','A kò mọ àkókò','Amaghị oge'],
+listening:['Listening...','I dey listen...','Ina sauraro...','Mo ń gbọ́...','Ana m ege ntị...'],
+none:['No hospital found. Try other filters.','No hospital dey. Try another filter.','Ba a samu asibiti ba. Gwada wani tace.','A kò rí ilé-ìwòsàn. Gbìyànjú àlẹ̀mọ́ míràn.','Achọtaghị ụlọ ọgwụ. Nwaa nzacha ọzọ.'],
+found:['{n} places found. Nearest is {name}, {d} away.','{n} place dey. Nearest na {name}, e dey {d} away.','An samu wurare {n}. Mafi kusa shi ne {name}, nisan {d}.','A rí ibi {n}. Èyí tó súnmọ́ jù ni {name}, ó jìn sí {d}.','Achọtara ebe {n}. Nke kacha nso bụ {name}, dị {d}.'],
+f24:['24 Hours Open','24 Hours Open','Awa 24','Wákàtí 24','Awa 24'],fmat:['Maternity','Maternity','Haihuwa','Ìbímọ','Ọmụmụ'],fae:['Accident & Emergency','Accident & Emergency','Hatsari & Gaggawa','Ìjàmbá & Pàjáwìrì','Ihe mberede'],
+fpha:['Pharmacy','Pharmacy','Kantin magani','Ilé oògùn','Ụlọ ọgwụ ahịa'],fchi:['Children','Pikin','Yara','Ọmọdé','Ụmụaka'],fpri:['Private','Private','Masu zaman kansu','Aládàáni','Nke onwe'],fpub:['Public','Public','Na gwamnati','Ti ìjọba','Nke ọha'],famb:['Has Ambulance','Get Ambulance','Da motar asibiti','Ní ọkọ̀ aláìsàn','Nwere ụgbọala ọgwụ'],
+allStates:['All States','All States','Dukkan Jihohi','Gbogbo Ìpínlẹ̀','Steeti niile'],
+home:['Home','Home','Gida','Ilé','Ụlọ'],map:['Map','Map','Taswira','Máàpù','Map'],saved:['Saved','Saved','Ajiye','Àfipamọ́','Echekwara'],sos:['SOS','SOS','SOS','SOS','SOS'],settings:['Settings','Settings','Saituna','Ètò','Ntọala'],
+language:['Language','Language','Harshe','Èdè','Asụsụ'],voice:['Voice On','Voice On','Murya a kunna','Ohùn ń ṣiṣẹ́','Olu na-arụ'],speed:['Voice Speed','Voice Speed','Gudun murya','Ìyára ohùn','Ọsọ olu'],dark:['Dark Mode','Dark Mode','Yanayin duhu','Ipò dúdú','Ọnọdụ ọchịchịrị'],
+name:['Your name','Your name','Sunanka','Orúkọ rẹ','Aha gị'],state:['State','State','Jiha','Ìpínlẹ̀','Steeti'],save:['Save','Save','Ajiye','Fipamọ́','Chekwa'],
+report:['Report wrong info / Suggest hospital','Report wrong info / Suggest hospital','Bayar da rahoto','Ṣe ìròyìn','Kọọ akụkọ'],share:['Share','Share','Raba','Pín','Kekọrịta'],fav:['Save','Save','Ajiye','Fipamọ́','Chekwa'],unfav:['Saved','Saved','An ajiye','A ti fipamọ́','Echekwara'],
+contacts:['Emergency Contacts','Emergency Contacts','Lambobin gaggawa','Àwọn nọ́ńbà pàjáwìrì','Ọnụ ọgụgụ mberede'],recents:['Recent searches','Recent searches','Binciken baya','Àwárí àìpẹ́','Nchọcha ọhụrụ'],nofav:['Nothing saved yet.','Nothing dey here yet.','Babu abin da aka ajiye.','Kò sí nǹkan.','Enweghị ihe echekwara.'],
+sosShare:['Share my live location','Share my live location','Raba wurina','Pín ibi tí mo wà','Kekọrịta ebe m nọ'],sosMsg:['EMERGENCY! I need help. My location:','EMERGENCY! I need help. My location:','GAGGAWA! Ina bukatar taimako. Wurina:','PÀJÁWÌRÌ! Mo nílò ìrànlọ́wọ́. Ibi tí mo wà:','MBEREDE! Achọrọ m enyemaka. Ebe m nọ:'],
+walk:['Walk','Walk','Tafiya','Rìn','Ije ụkwụ'],drive:['Drive','Drive','Mota','Ọkọ̀','Ụgbọala'],keke:['Keke','Keke','Keke','Keke','Keke'],remaining:['left','remain','saura','ló kù','fọdụrụ'],
+tl:['Turn left in {m}','Turn left for {m}','Juya hagu a cikin {m}','Yipada si apa osi ní {m}','Tụgharịa aka ekpe n’ime {m}'],
+tr:['Turn right in {m}','Turn right for {m}','Juya dama a cikin {m}','Yipada si apa otun ní {m}','Tụgharịa aka nri n’ime {m}'],
+st:['Go straight for {m}','Go straight for {m}','Yi gaba na {m}','Lọ tààrà fún {m}','Gaa n’ihu {m}'],
+ut:['Make a U-turn in {m}','Turn back after {m}','Juya baya a cikin {m}','Yipada padà ní {m}','Laghachi azụ n’ime {m}'],
+nl:['Turn left now','Turn left now','Juya hagu yanzu','Yipada si apa osi báyìí','Tụgharịa aka ekpe ugbu a'],nr:['Turn right now','Turn right now','Juya dama yanzu','Yipada si apa otun báyìí','Tụgharịa aka nri ugbu a'],
+arrIn:['The hospital is {m} ahead','Hospital dey {m} ahead','Asibiti yana gaba da {m}','Ilé-ìwòsàn wà níwájú ní {m}','Ụlọ ọgwụ dị n’ihu {m}'],
+arr:['You have arrived','You don reach','Ka isa','O ti dé','Ị ruola'],
+rr:['You missed the turn, rerouting','You miss the road, I dey find another way','Ka wuce hanya, ina neman wata hanya','O ti fò ọ̀nà náà, mò ń wá ọ̀nà míràn','Ị gafere ụzọ, ana m achọ ụzọ ọzọ'],
+start:['Nearest hospital is {d} away. Follow my directions.','Hospital dey {d} away. Follow my direction.','Asibiti mafi kusa yana da nisan {d}. Bi umarnina.','Ilé-ìwòsàn tó súnmọ́ jù jìn sí {d}. Tẹ̀lé ìtọ́sọ́nà mi.','Ụlọ ọgwụ kacha nso dị {d}. Soro ntụziaka m.'],
+vTitle:['Make your app talk like Naija','Make your app talk like Naija','Sa manhajar ta yi magana irin ta Najeriya','Jẹ́ kí app yìí sọ̀rọ̀ bí Nàìjà','Mee ka app a kwuo okwu dị ka Naịja'],
+vBtn:['Turn On Voice Now','Turn On Voice Now','Kunna Murya Yanzu','Tan Ohùn Báyìí','Gbanye Olu Ugbu a'],
+vReady:['Voice Ready ✅','Voice Ready ✅','Murya a shirye ✅','Ohùn ti ṣetán ✅','Olu dị njikere ✅'],
+vGo:['Continue','Continue','Ci gaba','Tẹ̀síwájú','Gaa n’ihu'],vEngine:['Voice type','Voice type','Nau’in murya','Irú ohùn','Ụdị olu'],
+vGroq:['Naija voice online (free)'],vPhone:['Phone voice'],vOff:['Offline recorded voice'],vFix:['Voice No Correct? Fix Am','Voice No Correct? Fix Am','Murya ba daidai ba? Gyara','Ohùn kò tọ̀? Tún un ṣe','Olu adịghị mma? Dozie ya'],vThanks:['Thanks, your voice go help others','Thanks, your voice go help others','Na gode, muryarka za ta taimaka wa wasu','O ṣé, ohùn rẹ yóò ran àwọn míì lọ́wọ́','Daalụ, olu gị ga-enyere ndị ọzọ aka'],vReport:['Wrong tone / pronunciation','Wrong tone / pronunciation','Sautin da ba daidai ba','Ohùn tí kò tọ́','Olu na-adịghị mma'],vHold:['Hold to record the correct way','Hold to record am correct','Rike don yin rikodi','Di mú láti gbà á sílẹ̀','Jide ka ị dekọọ'],vSend:['Send','Send','Aika','Fi ránṣẹ́','Zipu'],vModel:['Download offline voice engine (large download)'],vWordFix:['Fix one word for all phrases','Fix one word for all phrases'],vWord:['Word (as written)'],vPhon:['How to say am (e.g. Neh-weh)'],vShort:['Too short, record FULL sentence'],
+vVoteTitle:['Help us check this voice','Help us check this voice','Taimaka mana mu duba wannan murya','Ràn wá lọ́wọ́ láti yẹ ohùn yìí wò','Nyere anyị aka lelee olu a'],vYes:['Yes Correct','Yes Correct','Eh, daidai ne','Bẹ́ẹ̀ni, ó tọ̀','Ee, ọ ziri ezi'],vNo:['No Not Correct','No Not Correct','A\'a, ba daidai ba','Rárá, kò tọ̀','Mba, ọ dịghị mma'],vPlay:['Play','Play','Kunna','Ṣe é','Kpọọ'],
+vCheck:['Check voices'],
+novoice:['No voice for this language yet. Go to Settings > Voice type, or install the language voice.'],
+km:['kilometres','km','kilomita','kilomita','kilomita'],m:['metres','metres','mita','mita','mita'],
+nogps:['Location off. Showing Abuja. Enable GPS for accurate results.','GPS off. I dey show Abuja.','GPS a kashe. Ana nuna Abuja.','GPS ti pa. Abuja ni a fi hàn.','GPS emechiri. A na-egosi Abuja.'],
+sent:['Thank you. Saved.','Thank you. Saved.','Na gode. An ajiye.','O ṣé. A ti fipamọ́.','Daalụ. Echekwara.']
+};
+export function tr(l,k,v={}){const a=K[k]||[k];let s=a[IDX[l]]??a[0];for(const x in v)s=s.split('{'+x+'}').join(v[x]);return s}
+export function fmtDist(m,l){return m>=1000?`${(m/1000).toFixed(1)} ${tr(l,'km')}`:`${Math.max(10,Math.round(m/10)*10)} ${tr(l,'m')}`}

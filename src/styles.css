@@ -1,0 +1,27 @@
+:root{--navy:#0F2233;--navy2:#132E44;--g:#00D68F;--dg:#0A7A4A;--bg:#F2F5F3;--tx:#0F2233;--gr:#6B7A72;--red:#E63946;--y:#FFC107}
+*{box-sizing:border-box;margin:0}body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--tx);overscroll-behavior:none}
+body.dark{--bg:#0F2233;--tx:#F2F5F3;--gr:#9fb2a8}body.dark .card,body.dark input,body.dark select,body.dark textarea{background:#132E44;color:#F2F5F3}
+#root{max-width:560px;margin:0 auto;height:100dvh;display:flex;flex-direction:column;position:relative}
+.splash{position:fixed;inset:0;background:var(--navy);display:flex;align-items:center;justify-content:center;z-index:99}.splash img{width:min(100vw,100dvh);height:min(100vw,100dvh);object-fit:contain}
+.hdr{background:var(--navy);color:#fff;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}.hdr img{width:38px;height:38px;border-radius:8px}
+main{flex:1;overflow:auto;padding:12px 12px 150px}
+.nav{position:absolute;bottom:0;left:0;right:0;background:var(--navy);display:flex;padding-bottom:env(safe-area-inset-bottom);z-index:5}
+.nav button{flex:1;background:none;border:0;color:#9fb2a8;padding:10px 0;font-size:12px}.nav button.on{color:var(--g);font-weight:700}
+.sosbar{position:absolute;left:12px;right:12px;bottom:calc(58px + env(safe-area-inset-bottom));z-index:6}
+.sosbar button{width:100%;background:var(--red);color:#fff;border:0;border-radius:14px;padding:15px;font-size:17px;font-weight:800;box-shadow:0 4px 14px #0006}
+.mic{width:100%;background:var(--g);color:var(--navy);border:0;border-radius:16px;padding:18px;font-size:18px;font-weight:800;margin-bottom:10px}.mic.live{animation:p 1s infinite}@keyframes p{50%{opacity:.6}}
+input,select,textarea{width:100%;border:1px solid #cfd8d3;border-radius:12px;padding:12px;font-size:16px;margin-bottom:8px;background:#fff}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:8px}.chip{flex:none;border:1px solid var(--dg);background:none;color:var(--tx);border-radius:20px;padding:6px 12px;font-size:13px}.chip.on{background:var(--g);color:var(--navy);border-color:var(--g);font-weight:700}
+.card{background:#fff;border-radius:14px;padding:12px;margin-bottom:10px;box-shadow:0 1px 4px #0001}.card h3{font-size:16px}.meta{color:var(--gr);font-size:13px;margin:4px 0}
+.row{display:flex;gap:8px;margin-top:8px}.btn{flex:1;border:0;border-radius:10px;padding:10px;font-weight:700;font-size:14px;background:var(--g);color:var(--navy);text-align:center;text-decoration:none}.btn.alt{background:var(--navy);color:#fff}.btn.red{background:var(--red);color:#fff}
+.tag{font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px}.tag.o{background:#d6f7ea;color:var(--dg)}.tag.c{background:#fde0e2;color:var(--red)}.tag.u{background:#eee;color:var(--gr)}
+.say{background:var(--navy2);color:#fff;border-radius:12px;padding:10px;margin-bottom:10px;font-size:15px}
+#map{height:100%;width:100%}.mapwrap{position:absolute;inset:0;top:66px;bottom:calc(58px + env(safe-area-inset-bottom))}
+.navp{position:absolute;left:8px;right:8px;top:8px;z-index:500;background:var(--navy);color:#fff;border-radius:14px;padding:12px}.navp b{font-size:20px;display:block}
+.sheet{position:absolute;inset:0;background:var(--bg);z-index:50;overflow:auto;padding:14px 14px 40px}
+h2{margin:10px 0}
+body.admin{background:#0F2233;color:#fff}body.admin #root{max-width:960px}
+.adm{flex:1;overflow:auto;padding:14px}.adm a,.adm .lnk{color:#00D68F;cursor:pointer;margin-right:14px;font-weight:700;background:none;border:0;font-size:15px}
+.adm .c{background:#132E44;border-radius:12px;padding:12px;margin:10px 0}.adm input,.adm select,.adm textarea{background:#fff;color:#0F2233}
+.adm button.b{background:#00D68F;color:#0F2233;border:0;border-radius:8px;padding:8px 12px;font-weight:700;margin:4px 6px 0 0}.adm button.b.r{background:#E63946;color:#fff}.adm button.b:disabled{opacity:.4}
+.adm .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}.adm .big{font-size:28px;font-weight:800;color:#00D68F}.bad{color:#ff7a85;font-weight:700}.ok{color:#00D68F;font-weight:700}

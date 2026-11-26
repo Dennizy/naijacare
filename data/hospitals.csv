@@ -1,0 +1,16 @@
+name,type,lat,lon,state,lga,services,phone,is_24hrs,ownership,operational_status,has_emergency,has_ambulance,has_maternity,opening_hours
+National Hospital Abuja,Hospital,9.029,7.467,FCT,Abuja Municipal,"Emergency;Maternity;Surgery;Paediatrics",,true,Public,Operational,true,true,true,24/7
+University of Abuja Teaching Hospital,Hospital,8.944,7.084,FCT,Gwagwalada,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+Lagos University Teaching Hospital (LUTH),Hospital,6.518,3.357,Lagos,Mushin,"Emergency;Maternity;Surgery;Paediatrics",,true,Public,Operational,true,true,true,24/7
+University College Hospital Ibadan,Hospital,7.402,3.904,Oyo,Ibadan North,"Emergency;Maternity;Surgery;Paediatrics",,true,Public,Operational,true,true,true,24/7
+Ahmadu Bello University Teaching Hospital,Hospital,11.150,7.650,Kaduna,Zaria,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+Aminu Kano Teaching Hospital,Hospital,11.975,8.540,Kano,Nassarawa,"Emergency;Maternity;Surgery;Paediatrics",,true,Public,Operational,true,true,true,24/7
+University of Nigeria Teaching Hospital,Hospital,6.333,7.410,Enugu,Igbo-Eze South,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+University of Benin Teaching Hospital,Hospital,6.399,5.607,Edo,Oredo,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+University of Port Harcourt Teaching Hospital,Hospital,4.863,6.977,Rivers,Obio-Akpor,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+Obafemi Awolowo University Teaching Hospital,Hospital,7.488,4.553,Osun,Ife Central,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+University of Ilorin Teaching Hospital,Hospital,8.477,4.616,Kwara,Ilorin West,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+Jos University Teaching Hospital,Hospital,9.897,8.887,Plateau,Jos North,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+University of Maiduguri Teaching Hospital,Hospital,11.833,13.150,Borno,Maiduguri,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+Usmanu Danfodiyo University Teaching Hospital,Hospital,13.051,5.230,Sokoto,Sokoto North,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
+Federal Medical Centre Abeokuta,Hospital,7.158,3.338,Ogun,Abeokuta South,"Emergency;Maternity;Surgery",,true,Public,Operational,true,true,true,24/7
