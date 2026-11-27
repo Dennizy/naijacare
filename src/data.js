@@ -29,14 +29,12 @@ async function osm(lat,lon,r){const q=`[out:json][timeout:25];(nwr["amenity"~"^(
 async function supa(lat,lon,r){if(!sb)return[];const dg=Math.max(0.3,r/100000);
  const {data,error}=await sb.from('hospitals').select('*').gte('lat',lat-dg).lte('lat',lat+dg).gte('lon',lon-dg).lte('lon',lon+dg).limit(500);
  if(error)return[];return data.map(x=>({...x,id:'db-'+x.id,has_children:/child|paed/i.test(x.services||''),has_pharmacy:x.type==='Pharmacy'||/pharm/i.test(x.services||''),src:'db'}))}
- const st=STATES.find(s=>s[0]===stateName  (stateName==="FCT" && s[0]==="Abuja")  (stateName==="Abuja" && s[0]==="FCT"));
- for(const r of st?[30000]:[8000,25000,60000]){
-  const [a,b]=await Promise.allSettled([supa(c.lat,c.lon,r),osm(c.lat,c.lon,r)]);
-  out=[...(a.value||[])];for(const o of (b.value||[]))if(!out.some(x=>hav(x.lat,x.lon,o.lat,o.lon)<80))out.push(o);
-  if(a.status==='rejected'&&b.status==='rejected')throw new Error('offline');
+ const st = STATES.find(s => s[0] === stateName ||
+ (stateName === "FCT" && s[0] === "Abuja"));
+  const center = st ? [st[1], st[2]] : pos;
+  const radii = st ? [30000] : [8000, 25000, 60000];
+  for (const r of radii) {
   if(out.length>=3)break}
- return out.map(h=>({...h,dist:hav(pos.lat,pos.lon,h.lat,h.lon)})).sort((x,y)=>x.dist-y.dist)}
-export async function fetchRoute(from,to,mode){
  const prof=mode==='walk'?'routed-foot':'routed-car';
  const url=`${OSRM}/${prof}/route/v1/driving/${from.lon},${from.lat};${to.lon},${to.lat}?overview=full&geometries=geojson&steps=true`;
  const r=await fetch(url);const j=await r.json();if(!j.routes?.length)throw new Error('noroute');const rt=j.routes[0];
